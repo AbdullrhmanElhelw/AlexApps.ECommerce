@@ -1,0 +1,17 @@
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Application.deps.json
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Application.dll
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Application.pdb
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.pdb
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\bin\Debug\net8.0\AlexApps.ECommerce.Domain.pdb
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.csproj.AssemblyReference.cache
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.AssemblyInfoInputs.cache
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.AssemblyInfo.cs
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.B87A2E7A.Up2Date
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.dll
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\refint\AlexApps.ECommerce.Application.dll
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\AlexApps.ECommerce.Application.pdb
+C:\Users\20912020100682\source\repos\AlexApps.ECommerce\src\AlexApps.ECommerce.Application\obj\Debug\net8.0\ref\AlexApps.ECommerce.Application.dll

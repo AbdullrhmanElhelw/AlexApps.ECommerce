@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AlexApps.ECommerce.WebApi.props" />
+</Project>
