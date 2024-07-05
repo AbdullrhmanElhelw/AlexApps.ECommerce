@@ -1,3 +1,4 @@
+using AlexApps.ECommerce.Application;
 using AlexApps.ECommerce.Infrastructure;
 using AlexApps.ECommerce.Persistence;
 
@@ -8,9 +9,14 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddPersistence(builder.Configuration)
+builder.Services
+    .AddRepositores()
+    .AddApplication()
+    .AddPersistence(builder.Configuration)
     .AddInfrastructure(builder.Configuration)
-    .AddAuthenticationSchema(builder.Configuration);
+    .AddAuthenticationSchema(builder.Configuration)
+    .AddIdentityUsers()
+    .AddAuthorizationPolices();
 
 builder.Services.AddCors(op =>
 {

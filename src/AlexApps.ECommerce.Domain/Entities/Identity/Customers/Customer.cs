@@ -16,4 +16,16 @@ public sealed class Customer : ApplicationUser
 
     public int CartId { get; private set; }
     public Cart Cart { get; private set; }
+
+    public static Customer Create(string firstName, string lastName, string city, string email, string? street = null)
+    {
+        return new Customer
+        {
+            FirstName = firstName,
+            LastName = lastName,
+            City = city,
+            Email = email,
+            Street = street
+        };
+    }
 }

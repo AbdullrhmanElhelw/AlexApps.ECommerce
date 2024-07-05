@@ -12,4 +12,16 @@ public sealed class Merchant : ApplicationUser
     }
 
     public IReadOnlyCollection<Store> Store => _store;
+
+    public static Merchant Create(string firstName, string lastName, string city, string email)
+    {
+        return new Merchant
+        {
+            UserName = email[..email.IndexOf('@')],
+            FirstName = firstName,
+            LastName = lastName,
+            City = city,
+            Email = email
+        };
+    }
 }

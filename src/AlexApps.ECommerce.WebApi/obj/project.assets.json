@@ -4646,11 +4646,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.WebApi\\AlexApps.ECommerce.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.WebApi\\AlexApps.ECommerce.WebApi.csproj",
       "projectName": "AlexApps.ECommerce.WebApi",
-      "projectPath": "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.WebApi\\AlexApps.ECommerce.WebApi.csproj",
+      "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.WebApi\\AlexApps.ECommerce.WebApi.csproj",
       "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4668,11 +4668,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Infrastructure\\AlexApps.ECommerce.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Infrastructure\\AlexApps.ECommerce.Infrastructure.csproj"
+            "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Infrastructure\\AlexApps.ECommerce.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Infrastructure\\AlexApps.ECommerce.Infrastructure.csproj"
             },
-            "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Persistence\\AlexApps.ECommerce.Persistence.csproj": {
-              "projectPath": "C:\\Users\\20912020100682\\source\\repos\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Persistence\\AlexApps.ECommerce.Persistence.csproj"
+            "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Persistence\\AlexApps.ECommerce.Persistence.csproj": {
+              "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Persistence\\AlexApps.ECommerce.Persistence.csproj"
             }
           }
         }

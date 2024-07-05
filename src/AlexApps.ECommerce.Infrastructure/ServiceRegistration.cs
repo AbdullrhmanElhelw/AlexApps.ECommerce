@@ -1,4 +1,5 @@
 ﻿using AlexApps.ECommerce.Contracts.Authentication.Jwt;
+using AlexApps.ECommerce.Domain.Enums;
 using AlexApps.ECommerce.Infrastructure.Authentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -44,11 +45,13 @@ public static class ServiceRegistration
         return services;
     }
 
-    /*  public static IServiceCollection AddAuthorizationPolices(this IServiceCollection services)
-      {
-          services.AddAuthorizationBuilder()
-              .AddPolicy(nameof(AppRoles.Admin), policy => policy.RequireRole(nameof(AppRoles.Admin)))
-              .AddPolicy(nameof(AppRoles.User), policy => policy.RequireRole(nameof(AppRoles.User)));
-          return services;
-      }*/
+    public static IServiceCollection AddAuthorizationPolices(this IServiceCollection services)
+    {
+        services.AddAuthorizationBuilder()
+            .AddPolicy(nameof(ApplicationRoles.Admin), policy => policy.RequireRole(nameof(ApplicationRoles.Admin)))
+            .AddPolicy(nameof(ApplicationRoles.Merchant), policy => policy.RequireRole(nameof(ApplicationRoles.Merchant)))
+            .AddPolicy(nameof(ApplicationRoles.Customer), policy => policy.RequireRole(nameof(ApplicationRoles.Customer)));
+
+        return services;
+    }
 }

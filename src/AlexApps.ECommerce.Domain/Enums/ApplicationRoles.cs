@@ -2,4 +2,7 @@
 
 public enum ApplicationRoles
 {
+    Admin,
+    Merchant,
+    Customer
 }

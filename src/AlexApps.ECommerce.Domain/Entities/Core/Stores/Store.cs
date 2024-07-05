@@ -19,4 +19,14 @@ public sealed class Store : BaseEntity
     public Merchant Merchant { get; private set; }
 
     public IReadOnlyCollection<Product> Products => _products;
+
+    public static Store Create(string name, string? description, int merchantId)
+    {
+        return new Store
+        {
+            Name = name,
+            Description = description,
+            MerchantId = merchantId
+        };
+    }
 }

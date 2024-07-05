@@ -40,6 +40,6 @@ public class JwtProvider : IJwtProvider
 
         var accessToken = new JwtSecurityTokenHandler().WriteToken(token);
 
-        return Task.FromResult(new TokenResponse(accessToken, expires));
+        return Task.FromResult(new TokenResponse(accessToken));
     }
 }

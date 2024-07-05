@@ -19,8 +19,4 @@
     <ProjectReference Include="..\AlexApps.ECommerce.Application\AlexApps.ECommerce.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
