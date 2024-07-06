@@ -23,8 +23,26 @@ public sealed class Product : BaseEntity
     public int StoreId { get; private set; }
     public Store Store { get; private set; }
 
-    public int CartItemId { get; private set; }
+    public int? CartItemId { get; private set; }
     public CartItem CartItem { get; private set; }
 
     public IReadOnlyCollection<OrderItem> OrderItems => _items;
+
+    public static Product Create(string name, string? description, decimal price, decimal? vatRate, int quantity, int storeId)
+    {
+        return new Product
+        {
+            Name = name,
+            Description = description,
+            Price = price,
+            VatRate = vatRate,
+            Quantity = quantity,
+            StoreId = storeId
+        };
+    }
+
+    public static bool HasVatRate(Product product)
+    {
+        return product.VatRate.HasValue;
+    }
 }

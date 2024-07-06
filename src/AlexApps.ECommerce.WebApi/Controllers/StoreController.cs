@@ -1,32 +1,34 @@
-﻿using AlexApps.ECommerce.Application.Core.Utilities;
-using AlexApps.ECommerce.Domain.Enums;
+﻿using AlexApps.ECommerce.Application.Stores.CreateStore;
+using AlexApps.ECommerce.Application.Stores.GetSotre;
 using AlexApps.ECommerce.WebApi.Infrastructure;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlexApps.ECommerce.WebApi.Controllers;
 
-[Route("api/[controller]")]
+[Route(ApiRoutes.Store.Base)]
 [ApiController]
-[Authorize(Roles = nameof(ApplicationRoles.Merchant))]
 public class StoreController : ApiBaseController
 {
-    private readonly UserUtility _userUtility;
-
-    public StoreController(ISender sender, UserUtility userUtility) : base(sender)
+    public StoreController(ISender sender) : base(sender)
     {
-        _userUtility = userUtility;
     }
 
-    /*
-        [HttpPost(ApiRoutes.Store.CreateStore)]
-        public async Task<IActionResult> CreateStoreAsync([FromBody] CreateStoreCommand request)
-        {
-            var userId = _userUtility.GetUserId();
-            var result = await _sender.Send(request);
-            return result.IsSuccess ?
-                Ok(result) :
-                HandleFailure(result.ToResult());
-        }*/
+    [HttpGet(ApiRoutes.Store.GetStore)]
+    public async Task<IActionResult> GetStoreAsync([FromRoute] int id)
+    {
+        var result = await _sender.Send(new GetStoreQuery(id));
+        return result.IsSuccess ?
+            Ok(result.Value) :
+            HandleFailure(result.ToResult());
+    }
+
+    [HttpPost(ApiRoutes.Store.CreateStore)]
+    public async Task<IActionResult> CreateStoreAsync([FromBody] CreateStoreCommand request)
+    {
+        var result = await _sender.Send(request);
+        return result.IsSuccess ?
+            Ok(result) :
+            HandleFailure(result);
+    }
 }

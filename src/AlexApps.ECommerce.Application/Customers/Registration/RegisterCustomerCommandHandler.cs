@@ -12,6 +12,11 @@ public sealed class RegisterCustomerCommandHandler : ICommandHandler<RegisterCus
 {
     private readonly UserManager<Customer> _userManager;
 
+    public RegisterCustomerCommandHandler(UserManager<Customer> userManager)
+    {
+        _userManager = userManager;
+    }
+
     public async Task<Result> Handle(RegisterCustomerCommand request, CancellationToken cancellationToken)
     {
         var checkUserIsExists = await _userManager.FindByEmailAsync(request.Email);

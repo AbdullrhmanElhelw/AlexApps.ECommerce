@@ -1,21 +1,49 @@
 using AlexApps.ECommerce.Application;
 using AlexApps.ECommerce.Infrastructure;
 using AlexApps.ECommerce.Persistence;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "AlexApps.ECommerce", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please insert JWT with Bearer into field",
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 builder.Services
+    .AddInfrastructure(builder.Configuration)
+    .AddPersistence(builder.Configuration)
+    .AddIdentityUsers()
     .AddRepositores()
     .AddApplication()
-    .AddPersistence(builder.Configuration)
-    .AddInfrastructure(builder.Configuration)
     .AddAuthenticationSchema(builder.Configuration)
-    .AddIdentityUsers()
     .AddAuthorizationPolices();
 
 builder.Services.AddCors(op =>

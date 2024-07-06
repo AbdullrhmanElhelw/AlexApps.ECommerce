@@ -5,7 +5,7 @@
 namespace AlexApps.ECommerce.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class IntialCreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -231,7 +231,7 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    CartId = table.Column<int>(type: "int", nullable: false)
+                    CartId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -313,7 +313,7 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     VatRate = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     StoreId = table.Column<int>(type: "int", nullable: false),
-                    CartItemId = table.Column<int>(type: "int", nullable: false),
+                    CartItemId = table.Column<int>(type: "int", nullable: true),
                     CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
@@ -438,7 +438,8 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                 name: "IX_Products_CartItemId",
                 table: "Products",
                 column: "CartItemId",
-                unique: true);
+                unique: true,
+                filter: "[CartItemId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_StoreId",

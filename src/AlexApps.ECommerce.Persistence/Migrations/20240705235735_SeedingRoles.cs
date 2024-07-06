@@ -7,7 +7,6 @@ namespace AlexApps.ECommerce.Persistence.Migrations
     /// <inheritdoc />
     public partial class SeedingRoles : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql("Set IDENTITY_INSERT AspNetRoles ON");

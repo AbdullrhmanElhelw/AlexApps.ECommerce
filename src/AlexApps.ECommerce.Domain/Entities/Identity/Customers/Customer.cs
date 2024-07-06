@@ -14,13 +14,14 @@ public sealed class Customer : ApplicationUser
 
     public IReadOnlyCollection<Order> Orders => _orders;
 
-    public int CartId { get; private set; }
+    public int? CartId { get; private set; }
     public Cart Cart { get; private set; }
 
     public static Customer Create(string firstName, string lastName, string city, string email, string? street = null)
     {
         return new Customer
         {
+            UserName = email[..email.IndexOf('@')],
             FirstName = firstName,
             LastName = lastName,
             City = city,

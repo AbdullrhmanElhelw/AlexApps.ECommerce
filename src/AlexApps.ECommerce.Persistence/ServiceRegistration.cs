@@ -1,6 +1,9 @@
 ﻿using AlexApps.ECommerce.Application;
 using AlexApps.ECommerce.Contracts.UnitOfWork;
 using AlexApps.ECommerce.Domain.Common;
+using AlexApps.ECommerce.Domain.Entities.Core.CartItems;
+using AlexApps.ECommerce.Domain.Entities.Core.Carts;
+using AlexApps.ECommerce.Domain.Entities.Core.Products;
 using AlexApps.ECommerce.Domain.Entities.Core.Stores;
 using AlexApps.ECommerce.Domain.Entities.Identity.Buyers;
 using AlexApps.ECommerce.Domain.Entities.Identity.Merchants;
@@ -63,6 +66,9 @@ public static class ServiceRegistration
     public static IServiceCollection AddRepositores(this IServiceCollection services)
     {
         services.AddScoped<IStoreRepository, StoreRepository>();
+        services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<ICartRepository, CartRepository>();
+        services.AddScoped<ICartItemRepository, CartItemRepository>();
         return services;
     }
 }

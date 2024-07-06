@@ -6,7 +6,7 @@ namespace AlexApps.ECommerce.Domain.Entities.Core.Carts;
 
 public sealed class Cart : BaseEntity
 {
-    private readonly IReadOnlyCollection<CartItem> _cartItems;
+    private readonly List<CartItem> _cartItems;
 
     private Cart()
     {
@@ -18,4 +18,12 @@ public sealed class Cart : BaseEntity
     public Customer Customer { get; private set; }
 
     public IReadOnlyCollection<CartItem> CartItems => _cartItems;
+
+    public static Cart Create(int customerId)
+    {
+        return new Cart
+        {
+            CustomerId = customerId
+        };
+    }
 }

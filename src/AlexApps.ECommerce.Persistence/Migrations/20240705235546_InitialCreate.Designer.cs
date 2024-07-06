@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlexApps.ECommerce.Persistence.Migrations
 {
     [DbContext(typeof(ECommerceDbContext))]
-    [Migration("20240705010510_IntialCreate")]
-    partial class IntialCreate
+    [Migration("20240705235546_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -138,9 +138,6 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     b.Property<int>("CartId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CartId1")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedOnUtc")
                         .HasColumnType("datetime2");
 
@@ -165,8 +162,6 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CartId");
-
-                    b.HasIndex("CartId1");
 
                     b.ToTable("CartItems", (string)null);
                 });
@@ -290,7 +285,7 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CartItemId")
+                    b.Property<int?>("CartItemId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOnUtc")
@@ -329,7 +324,8 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CartItemId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[CartItemId] IS NOT NULL");
 
                     b.HasIndex("StoreId");
 
@@ -512,7 +508,7 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                 {
                     b.HasBaseType("AlexApps.ECommerce.Domain.Common.ApplicationUser");
 
-                    b.Property<int>("CartId")
+                    b.Property<int?>("CartId")
                         .HasColumnType("int");
 
                     b.HasIndex("CartId")
@@ -531,15 +527,9 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.CartItems.CartItem", b =>
                 {
-                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", null)
+                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", "Cart")
                         .WithMany("CartItems")
                         .HasForeignKey("CartId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", "Cart")
-                        .WithMany()
-                        .HasForeignKey("CartId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -581,8 +571,7 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.CartItems.CartItem", "CartItem")
                         .WithOne("Product")
                         .HasForeignKey("AlexApps.ECommerce.Domain.Entities.Core.Products.Product", "CartItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Stores.Store", "Store")
                         .WithMany("Products")
@@ -662,8 +651,7 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", "Cart")
                         .WithOne("Customer")
                         .HasForeignKey("AlexApps.ECommerce.Domain.Entities.Identity.Buyers.Customer", "CartId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("AlexApps.ECommerce.Domain.Common.ApplicationUser", null)
                         .WithOne()

@@ -2,5 +2,9 @@
 
 public interface IStoreRepository
 {
+    Task<bool> IsExistsAsync(int id);
+
+    Task<Store?> GetAsync(int id);
+
     void Insert(Store store);
 }

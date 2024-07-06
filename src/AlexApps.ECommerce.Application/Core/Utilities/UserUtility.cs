@@ -4,14 +4,14 @@ using System.Security.Claims;
 namespace AlexApps.ECommerce.Application.Core.Utilities;
 
 public class UserUtility
+    (IHttpContextAccessor httpContextAccessor)
 {
-    private readonly IHttpContextAccessor _httpContextAccessor;
-
-    public UserUtility(IHttpContextAccessor httpContextAccessor) => _httpContextAccessor = httpContextAccessor;
+    private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
     public int GetUserId()
     {
-        var userId = _httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
-        return Convert.ToInt32(userId);
+        var claim = ClaimTypes.NameIdentifier;
+        var userId = _httpContextAccessor.HttpContext?.User.FindFirstValue(claim);
+        return userId is null ? 0 : int.Parse(userId);
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlexApps.ECommerce.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+221715de9fe3ea5b26884c689e506a05b52f5781")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63a8e6a0ff4c9eff246f945c0c37587610523851")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlexApps.ECommerce.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlexApps.ECommerce.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
