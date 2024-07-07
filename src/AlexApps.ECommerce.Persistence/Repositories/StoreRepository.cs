@@ -12,6 +12,11 @@ public class StoreRepository : IStoreRepository
         _dbContext = dbContext;
     }
 
+    public async Task<IReadOnlyCollection<Store>> GetAllAsync() =>
+        await _dbContext.Stores
+        .Select(x => Store.GetStore(x.Id, x.Name, x.Description, x.MerchantId))
+        .ToListAsync();
+
     public async Task<Store?> GetAsync(int id) =>
           await _dbContext.Stores
         .FirstOrDefaultAsync(x => x.Id == id);

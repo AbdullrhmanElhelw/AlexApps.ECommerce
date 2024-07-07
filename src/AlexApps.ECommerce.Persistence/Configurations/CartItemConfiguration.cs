@@ -11,12 +11,5 @@ internal sealed class CartItemConfiguration : IEntityTypeConfiguration<CartItem>
         builder.ToTable("CartItems");
 
         builder.HasKey(ci => ci.Id);
-
-        builder.Property(ci => ci.Quantity)
-            .IsRequired();
-
-        builder.Property(ci => ci.Price)
-            .HasColumnType("decimal(18,2)")
-            .IsRequired();
     }
 }

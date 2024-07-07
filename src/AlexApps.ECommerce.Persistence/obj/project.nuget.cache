@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KBzhsHI4pYo=",
+  "dgSpecHash": "Jg1HefDhiT4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Persistence\\AlexApps.ECommerce.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Persistence\\AlexApps.ECommerce.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\20912020100682\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\20912020100682\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

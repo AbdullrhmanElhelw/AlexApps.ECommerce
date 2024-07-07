@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj": {}
+    "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj": {
+    "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj",
         "projectName": "AlexApps.ECommerce.Contracts",
-        "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj",
+        "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\AlexApps.ECommerce.Contracts.csproj",
         "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",

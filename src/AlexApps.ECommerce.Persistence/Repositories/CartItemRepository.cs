@@ -23,23 +23,28 @@ public class CartItemRepository : ICartItemRepository
             .Select(c => new
             {
                 c.Id,
-                c.Quantity,
-                c.Price,
                 c.Product
             })
             .ToListAsync();
 
-        return cartItemData.Select(c => CartItem.GetCartItem(c.Id, c.Quantity, c.Price, c.Product)).ToList();
+        return cartItemData.Select(c => CartItem.GetCartItem(c.Id, c.Product)).ToList();
     }
 
     public async Task<CartItem?> GetById(int id) =>
         await _dbContext.CartItems.FindAsync(id);
 
-    public async Task<decimal> GetTotalPrice(int cartId) =>
-    await _dbContext.CartItems
-        .Where(c => c.CartId == cartId)
-        .Include(c => c.Product)
-        .AsNoTracking()
-        .Select(c => c.Quantity * c.Product.Price * (1 + (c.Product.VatRate ?? 0)))
-        .SumAsync();
+    public async Task<int> GetItemQuantity(int cartId, int productId) =>
+        await _dbContext.CartItems
+        .CountAsync(c => c.CartId == cartId && c.ProductId == productId);
+
+    public async Task<decimal> GetTotalPrice(int cartId)
+    {
+        var totalPrice = await _dbContext.CartItems
+            .Where(c => c.CartId == cartId)
+            .Select(c => c.Product)
+            .Select(c => new { c.Price, c.VatRate })
+            .SumAsync(c => c.Price * (1 + (c.VatRate > 0 ? c.VatRate : 0)));
+
+        return totalPrice.Value;
+    }
 }

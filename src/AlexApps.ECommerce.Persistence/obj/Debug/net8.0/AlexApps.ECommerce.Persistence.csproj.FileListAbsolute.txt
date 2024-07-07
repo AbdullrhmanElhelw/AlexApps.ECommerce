@@ -41,3 +41,46 @@ C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommer
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.pdb
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.genruntimeconfig.cache
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\ref\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.deps.json
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.runtimeconfig.json
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Application.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Application.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Domain.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.csproj.AssemblyReference.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.AssemblyInfoInputs.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.AssemblyInfo.cs
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.EB251BAB.Up2Date
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\refint\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.genruntimeconfig.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\ref\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.deps.json
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.runtimeconfig.json
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Persistence.pdb
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Application.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Application.pdb
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.pdb
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\bin\Debug\net8.0\AlexApps.ECommerce.Domain.pdb
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.csproj.AssemblyReference.cache
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.AssemblyInfoInputs.cache
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.AssemblyInfo.cs
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.sourcelink.json
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.EB251BAB.Up2Date
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\refint\AlexApps.ECommerce.Persistence.dll
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.pdb
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\AlexApps.ECommerce.Persistence.genruntimeconfig.cache
+C:\Users\20912020100682\Desktop\Projects\Helwan-Map\AlexApps.ECommerce\src\AlexApps.ECommerce.Persistence\obj\Debug\net8.0\ref\AlexApps.ECommerce.Persistence.dll

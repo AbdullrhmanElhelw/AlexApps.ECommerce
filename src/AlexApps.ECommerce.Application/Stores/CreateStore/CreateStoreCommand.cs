@@ -7,3 +7,7 @@ public sealed record CreateStoreCommand
     int MerchantId,
     string Name,
     string? Description) : ICommand;
+
+public sealed record CreateStoreRequest
+    (string Name,
+    string? Description);

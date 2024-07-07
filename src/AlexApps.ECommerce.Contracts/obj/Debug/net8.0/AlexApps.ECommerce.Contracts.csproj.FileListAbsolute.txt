@@ -23,3 +23,15 @@ C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommer
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\refint\AlexApps.ECommerce.Contracts.dll
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.pdb
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\ref\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.deps.json
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\bin\Debug\net8.0\AlexApps.ECommerce.Contracts.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.csproj.AssemblyReference.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.AssemblyInfoInputs.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.AssemblyInfo.cs
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\refint\AlexApps.ECommerce.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\AlexApps.ECommerce.Contracts.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Contracts\obj\Debug\net8.0\ref\AlexApps.ECommerce.Contracts.dll

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlexApps.ECommerce.Persistence.Migrations
 {
     [DbContext(typeof(ECommerceDbContext))]
-    [Migration("20240705235735_SeedingRoles")]
-    partial class SeedingRoles
+    [Migration("20240707004153_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -150,18 +150,14 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                     b.Property<DateTime?>("ModifiedOnUtc")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("CartItems", (string)null);
                 });
@@ -193,6 +189,9 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerId")
+                        .IsUnique();
 
                     b.ToTable("Carts", (string)null);
                 });
@@ -285,9 +284,6 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CartItemId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedOnUtc")
                         .HasColumnType("datetime2");
 
@@ -322,10 +318,6 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CartItemId")
-                        .IsUnique()
-                        .HasFilter("[CartItemId] IS NOT NULL");
 
                     b.HasIndex("StoreId");
 
@@ -508,13 +500,6 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                 {
                     b.HasBaseType("AlexApps.ECommerce.Domain.Common.ApplicationUser");
 
-                    b.Property<int?>("CartId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("CartId")
-                        .IsUnique()
-                        .HasFilter("[CartId] IS NOT NULL");
-
                     b.ToTable("Customers", (string)null);
                 });
 
@@ -533,7 +518,26 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Products.Product", "Product")
+                        .WithMany("CartItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", b =>
+                {
+                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Identity.Buyers.Customer", "Customer")
+                        .WithOne("Cart")
+                        .HasForeignKey("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", "CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.OrderItems.OrderItem", b =>
@@ -568,18 +572,11 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.Products.Product", b =>
                 {
-                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.CartItems.CartItem", "CartItem")
-                        .WithOne("Product")
-                        .HasForeignKey("AlexApps.ECommerce.Domain.Entities.Core.Products.Product", "CartItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Stores.Store", "Store")
                         .WithMany("Products")
                         .HasForeignKey("StoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("CartItem");
 
                     b.Navigation("Store");
                 });
@@ -648,18 +645,11 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Identity.Buyers.Customer", b =>
                 {
-                    b.HasOne("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", "Cart")
-                        .WithOne("Customer")
-                        .HasForeignKey("AlexApps.ECommerce.Domain.Entities.Identity.Buyers.Customer", "CartId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("AlexApps.ECommerce.Domain.Common.ApplicationUser", null)
                         .WithOne()
                         .HasForeignKey("AlexApps.ECommerce.Domain.Entities.Identity.Buyers.Customer", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Cart");
                 });
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Identity.Merchants.Merchant", b =>
@@ -671,18 +661,9 @@ namespace AlexApps.ECommerce.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.CartItems.CartItem", b =>
-                {
-                    b.Navigation("Product")
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.Carts.Cart", b =>
                 {
                     b.Navigation("CartItems");
-
-                    b.Navigation("Customer")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.Orders.Order", b =>
@@ -692,6 +673,8 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Core.Products.Product", b =>
                 {
+                    b.Navigation("CartItems");
+
                     b.Navigation("OrderItems");
                 });
 
@@ -702,6 +685,9 @@ namespace AlexApps.ECommerce.Persistence.Migrations
 
             modelBuilder.Entity("AlexApps.ECommerce.Domain.Entities.Identity.Buyers.Customer", b =>
                 {
+                    b.Navigation("Cart")
+                        .IsRequired();
+
                     b.Navigation("Orders");
                 });
 

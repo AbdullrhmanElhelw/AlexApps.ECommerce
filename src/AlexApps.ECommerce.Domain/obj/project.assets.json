@@ -820,11 +820,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Domain\\AlexApps.ECommerce.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Domain\\AlexApps.ECommerce.Domain.csproj",
       "projectName": "AlexApps.ECommerce.Domain",
-      "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Domain\\AlexApps.ECommerce.Domain.csproj",
+      "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Domain\\AlexApps.ECommerce.Domain.csproj",
       "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Domain\\obj\\",
+      "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\Helwan-Map\\AlexApps.ECommerce\\src\\AlexApps.ECommerce.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",

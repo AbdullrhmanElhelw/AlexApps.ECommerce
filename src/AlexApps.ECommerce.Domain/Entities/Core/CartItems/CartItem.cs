@@ -10,34 +10,26 @@ public sealed class CartItem : BaseEntity
     {
     }
 
-    public int Quantity { get; private set; }
-
-    public decimal Price { get; private set; }
-
     public int ProductId { get; private set; }
     public Product Product { get; private set; }
 
     public int CartId { get; private set; }
     public Cart Cart { get; private set; }
 
-    public static CartItem Create(int cartId, int productId, int quantity, decimal price)
+    public static CartItem Create(int cartId, int productId)
     {
         return new CartItem
         {
             CartId = cartId,
             ProductId = productId,
-            Quantity = quantity,
-            Price = price
         };
     }
 
-    public static CartItem GetCartItem(int id, int quantity, decimal price, Product product)
+    public static CartItem GetCartItem(int id, Product product)
     {
         return new CartItem
         {
             Id = id,
-            Quantity = quantity,
-            Price = price,
             Product = product
         };
     }

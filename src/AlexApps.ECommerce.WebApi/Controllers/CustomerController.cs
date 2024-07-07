@@ -1,4 +1,5 @@
 ﻿using AlexApps.ECommerce.Application.Customers.Registration;
+using AlexApps.ECommerce.WebApi.Contracts;
 using AlexApps.ECommerce.WebApi.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

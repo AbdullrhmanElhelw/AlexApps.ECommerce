@@ -1,7 +1,10 @@
 ﻿using AlexApps.ECommerce.Application.Products.CreateProduct;
-using AlexApps.ECommerce.Application.Products.GetProduct;
+using AlexApps.ECommerce.Application.Products.GetProducts;
+using AlexApps.ECommerce.Domain.Enums;
+using AlexApps.ECommerce.WebApi.Contracts;
 using AlexApps.ECommerce.WebApi.Infrastructure;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlexApps.ECommerce.WebApi.Controllers;
@@ -14,10 +17,11 @@ public class ProductController : ApiBaseController
     {
     }
 
+    [HttpGet(ApiRoutes.Product.GetProducts)]
     [HttpGet(ApiRoutes.Product.GetProduct)]
-    public async Task<IActionResult> GetProduct(int id)
+    public async Task<IActionResult> GetProduct(int storeId)
     {
-        var result = await _sender.Send(new GetProductQuery(id));
+        var result = await _sender.Send(new GetProductsQuery(storeId));
 
         return result.IsSuccess ?
             Ok(result.Value) :
@@ -25,6 +29,7 @@ public class ProductController : ApiBaseController
     }
 
     [HttpPost(ApiRoutes.Product.CreateProduct)]
+    [Authorize(Roles = nameof(ApplicationRoles.Merchant))]
     public async Task<IActionResult> CreateProduct(CreateProductCommand command)
     {
         var result = await _sender.Send(command);

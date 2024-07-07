@@ -24,6 +24,6 @@ public sealed class GetStoreQueryHandler
 
         var store = await _storeRepository.GetAsync(request.Id);
 
-        return Result.Ok(new GetStoreDto(store.Id, store.Name, store.Description));
+        return Result.Ok(new GetStoreDto(store.Id, store.Name, store.Description, store.MerchantId));
     }
 }

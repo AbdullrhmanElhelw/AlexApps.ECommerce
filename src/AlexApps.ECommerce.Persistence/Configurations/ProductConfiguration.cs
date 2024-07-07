@@ -31,10 +31,10 @@ internal sealed class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.VatRate)
             .HasColumnType("decimal(18,2)");
 
-        builder.HasOne(x => x.CartItem)
-            .WithOne(x => x.Product)
-            .HasForeignKey<Product>(x => x.CartItemId)
-            .OnDelete(DeleteBehavior.Cascade);
+        builder.HasMany(x => x.CartItems)
+                .WithOne(x => x.Product)
+                .HasForeignKey(x => x.ProductId)
+                .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(x => x.OrderItems)
             .WithOne(x => x.Product)

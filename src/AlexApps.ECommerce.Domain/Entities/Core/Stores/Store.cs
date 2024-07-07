@@ -29,4 +29,24 @@ public sealed class Store : BaseEntity
             MerchantId = merchantId
         };
     }
+
+    public static Store GetStore(int id, string name, string? description, int merchantId)
+    {
+        return new Store
+        {
+            Id = id,
+            Name = name,
+            Description = description,
+            MerchantId = merchantId
+        };
+    }
+
+    public static Store GetStoreName(int id, string name)
+    {
+        return new Store
+        {
+            Id = id,
+            Name = name
+        };
+    }
 }

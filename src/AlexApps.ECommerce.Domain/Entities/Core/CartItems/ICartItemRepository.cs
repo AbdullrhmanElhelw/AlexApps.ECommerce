@@ -2,6 +2,8 @@
 
 public interface ICartItemRepository
 {
+    Task<int> GetItemQuantity(int cartId, int productId);
+
     Task<decimal> GetTotalPrice(int cartId);
 
     Task<CartItem?> GetById(int id);

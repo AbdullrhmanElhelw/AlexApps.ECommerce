@@ -1,4 +1,5 @@
 ﻿using AlexApps.ECommerce.Domain.Entities.Core.Carts;
+using Microsoft.EntityFrameworkCore;
 
 namespace AlexApps.ECommerce.Persistence.Repositories;
 
@@ -16,4 +17,8 @@ public class CartRepository : ICartRepository
 
     public async Task<Cart?> GetById(int id)
         => await _dbContext.Carts.FindAsync(id);
+
+    public async Task<Cart?> GetByCustomerIdAsync(int customerId) =>
+        await _dbContext.Carts
+        .FirstOrDefaultAsync(x => x.CustomerId == customerId);
 }

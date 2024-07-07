@@ -8,6 +8,7 @@ namespace AlexApps.ECommerce.Domain.Entities.Core.Products;
 public sealed class Product : BaseEntity
 {
     private readonly IReadOnlyCollection<OrderItem> _items;
+    private readonly List<CartItem> _cartItems;
 
     private Product()
     {
@@ -23,8 +24,7 @@ public sealed class Product : BaseEntity
     public int StoreId { get; private set; }
     public Store Store { get; private set; }
 
-    public int? CartItemId { get; private set; }
-    public CartItem CartItem { get; private set; }
+    public IReadOnlyCollection<CartItem> CartItems => _cartItems;
 
     public IReadOnlyCollection<OrderItem> OrderItems => _items;
 
@@ -38,6 +38,26 @@ public sealed class Product : BaseEntity
             VatRate = vatRate,
             Quantity = quantity,
             StoreId = storeId
+        };
+    }
+
+    public static Product GetProduct(int id,
+                                     string name,
+                                     string? description,
+                                     decimal price,
+                                     decimal? vatRate,
+                                     int quantity,
+                                     Store store)
+    {
+        return new Product
+        {
+            Id = id,
+            Name = name,
+            Description = description,
+            Price = price,
+            VatRate = vatRate,
+            Quantity = quantity,
+            Store = store
         };
     }
 

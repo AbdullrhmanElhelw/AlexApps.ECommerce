@@ -1,4 +1,4 @@
-﻿namespace AlexApps.ECommerce.WebApi.Infrastructure;
+﻿namespace AlexApps.ECommerce.WebApi.Contracts;
 
 public static class ApiRoutes
 {
@@ -19,6 +19,7 @@ public static class ApiRoutes
         public const string Base = "api/store";
         public const string CreateStore = "create";
         public const string GetStore = "{id}";
+        public const string GetStores = "stores";
     }
 
     public static class Customer
@@ -32,6 +33,7 @@ public static class ApiRoutes
         public const string Base = "api/product";
         public const string CreateProduct = "create";
         public const string GetProduct = "{id}";
+        public const string GetProducts = "{storeId:int}";
     }
 
     public static class Cart
@@ -39,7 +41,14 @@ public static class ApiRoutes
         public const string Base = "api/cart";
         public const string CreateCart = "create";
         public const string AddItemToCart = "add";
-        public const string GetCartItems = "items/{id:int}";
-        public const string GetCartTotalPrice = "total-price/{id:int}";
+        public const string GetCartItems = "items";
+        public const string GetCartTotalPrice = "total-price";
+    }
+
+    public static class CartItem
+    {
+        public const string Base = "api/cart-item";
+        public const string AddItem = "add/{pId:int}";
+        public const string GetItemQuantity = "quantity/{cId:int}/{pId:int}";
     }
 }

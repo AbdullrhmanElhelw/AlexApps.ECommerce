@@ -7,13 +7,13 @@ using FluentResults;
 namespace AlexApps.ECommerce.Application.Carts.GetCartItems;
 
 public sealed record GetCartItemsQuery
-    (int cartId) : IQuery<IReadOnlyCollection<CartItemDto>>;
+    (int CustomerId) : IQuery<IReadOnlyCollection<CartItemDto>>;
 
 public sealed record CartItemDto
     (int Id,
-    int Quantity,
+    string ProductName,
     decimal Price,
-    string ProductName);
+    decimal? VatRate);
 
 public sealed class GetCartItemsQueryHandler :
     IQueryHandler<GetCartItemsQuery, IReadOnlyCollection<CartItemDto>>
@@ -29,16 +29,16 @@ public sealed class GetCartItemsQueryHandler :
 
     public async Task<Result<IReadOnlyCollection<CartItemDto>>> Handle(GetCartItemsQuery request, CancellationToken cancellationToken)
     {
-        var checkCartIsExsits = await _cartRepository.GetById(request.cartId);
+        var checkCartIsExsits = await _cartRepository.GetByCustomerIdAsync(request.CustomerId);
         if (checkCartIsExsits is null)
             return new Result<IReadOnlyCollection<CartItemDto>>().WithError(new RecordNotFoundError("Cart Not Found"));
 
-        var cartItems = await _cartItemRepository.GetAll(request.cartId);
+        var cartItems = await _cartItemRepository.GetAll(checkCartIsExsits.Id);
 
         IReadOnlyCollection<CartItemDto> cartItemDtos = cartItems.Select(ci => new CartItemDto(ci.Id,
-                                                                                               ci.Quantity,
-                                                                                               ci.Price,
-                                                                                               ci.Product.Name)).ToList();
+                                                                                               ci.Product.Name,
+                                                                                               ci.Product.Price,
+                                                                                               ci.Product.VatRate)).ToList();
 
         return Result.Ok(cartItemDtos);
     }

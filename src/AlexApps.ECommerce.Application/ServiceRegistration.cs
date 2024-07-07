@@ -1,4 +1,5 @@
-﻿using AlexApps.ECommerce.Contracts.CQRS.Behaviors;
+﻿using AlexApps.ECommerce.Application.Core.Utilities;
+using AlexApps.ECommerce.Contracts.CQRS.Behaviors;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +16,8 @@ public static class ServiceRegistration
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+        services.AddScoped<UserUtility>();
 
         return services;
     }

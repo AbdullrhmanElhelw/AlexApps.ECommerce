@@ -1,4 +1,5 @@
-﻿using AlexApps.ECommerce.Domain.Entities.Identity.Buyers;
+﻿using AlexApps.ECommerce.Domain.Entities.Core.Carts;
+using AlexApps.ECommerce.Domain.Entities.Identity.Buyers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -17,7 +18,7 @@ internal sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
 
         builder.HasOne(x => x.Cart)
             .WithOne(x => x.Customer)
-            .HasForeignKey<Customer>(x => x.CartId)
+            .HasForeignKey<Cart>(x => x.CustomerId)
             .OnDelete(DeleteBehavior.Cascade);
     }
 }

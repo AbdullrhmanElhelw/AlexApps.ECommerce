@@ -6,4 +6,4 @@ public sealed record GetStoreQuery
     (int Id) : IQuery<GetStoreDto>;
 
 public sealed record GetStoreDto
-    (int Id, string Name, string? Description);
+    (int Id, string Name, string? Description, int MerchentId);

@@ -23,3 +23,15 @@ C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommer
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\refint\AlexApps.ECommerce.Domain.dll
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.pdb
 C:\Users\20912020100682\Desktop\Projects\AlexApps.ECommerce\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\ref\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\bin\Debug\net8.0\AlexApps.ECommerce.Domain.deps.json
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\bin\Debug\net8.0\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\bin\Debug\net8.0\AlexApps.ECommerce.Domain.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.csproj.AssemblyReference.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.AssemblyInfo.cs
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\refint\AlexApps.ECommerce.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\AlexApps.ECommerce.Domain.pdb
+C:\Users\20912020100682\Desktop\Projects\New folder\src\AlexApps.ECommerce.Domain\obj\Debug\net8.0\ref\AlexApps.ECommerce.Domain.dll
